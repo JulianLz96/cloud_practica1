@@ -16,12 +16,12 @@ class ParseTriples():
             line = self._file.readline()
         
         if(not line):
-            print(line)
+            #print(line)
             return None
         
         m = re.match('<(.+)>\s*<(.+)>\s*[<"](.+)[>"]',line.strip())
        # print(re.match('(.+)',m.group(1)))
-        print(m.group(1))
+        #print(m.group(1))
         if(m):
             return m.group(1),m.group(2),m.group(3)
         else:
