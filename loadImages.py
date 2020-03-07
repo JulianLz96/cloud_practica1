@@ -17,7 +17,7 @@ temp = 0
 images_ttl = ParseTripe.ParseTriples("resources/images.ttl") 
 labels_ttl = ParseTripe.ParseTriples("resources/labels_en.ttl")
 
-while temp < 100:
+while temp < 200:
     temp_images = images_ttl.getNext()
     if(temp_images[1] == "http://xmlns.com/foaf/0.1/depiction"):
         kv_images.put(str(temp_images[0]),str(temp_images[2]))
@@ -25,7 +25,7 @@ while temp < 100:
             temp_cat.append(temp_images[0])
     temp+=1
 temp=0
-while temp < 100:
+while temp < 200:
     temp_labels = labels_ttl.getNext()
     if(temp_labels[1] == "http://www.w3.org/2000/01/rdf-schema#label"):
         len_labels = temp_labels[2].split(" ")
